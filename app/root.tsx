@@ -12,7 +12,7 @@ import "./tailwind.css";
 export const links: LinksFunction = () => [
   { href: "https://fonts.googleapis.com", rel: "preconnect" },
   {
-    crzossOrigin: "anonymous",
+    crzossorigin: "anonymous",
     href: "https://fonts.gstatic.com",
     rel: "preconnect",
   },

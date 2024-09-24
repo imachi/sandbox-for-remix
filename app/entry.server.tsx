@@ -7,9 +7,11 @@
 import { PassThrough } from "node:stream";
 
 import { RemixServer } from "@remix-run/react";
+import { createReadableStreamFromReadable } from "@remix-run/node";
 import { isbot } from "isbot";
 import { renderToPipeableStream } from "react-dom/server";
-import type { AppLoadContext, EntryContext, createReadableStreamFromReadable } from "@remix-run/node";
+// eslint-disable-next-line no-duplicate-imports
+import type { AppLoadContext, EntryContext } from "@remix-run/node";
 
 const ABORT_DELAY = 5_000;
 
@@ -133,7 +135,6 @@ function handleBrowserRequest(
 
           pipe(body);
         },
-
       },
     );
 
