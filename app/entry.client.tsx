@@ -5,14 +5,16 @@
  */
 
 import { RemixBrowser } from "@remix-run/react";
-import { startTransition, StrictMode } from "react";
 import { hydrateRoot } from "react-dom/client";
-
+import { StrictMode, startTransition } from "react";
 startTransition(() => {
+  const hoge: string = "hoge";
+
   hydrateRoot(
     document,
     <StrictMode>
       <RemixBrowser />
-    </StrictMode>
+      {hoge === "piyo" ? true : false}
+    </StrictMode>,
   );
 });
